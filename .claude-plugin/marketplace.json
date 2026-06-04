@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "kohlex-autopilot",
+  "owner": {
+    "name": "Kohlex"
+  },
+  "plugins": [
+    {
+      "name": "autopilot",
+      "description": "Autonomous platform-development substrate for Claude Code.",
+      "source": {
+        "source": "github",
+        "repo": "Kohlex/autopilot-plugin"
+      }
+    }
+  ]
+}
