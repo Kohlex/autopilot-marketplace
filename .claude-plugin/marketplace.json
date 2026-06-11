@@ -7,7 +7,8 @@
   "plugins": [
     {
       "name": "autopilot",
-      "description": "Autonomous platform-development substrate for Claude Code.",
+      "description": "Autonomous platform-development substrate for Claude Code. v2: doc-freshness, verbatim-HITL, execution-discipline, integration pipeline (M2-M6).",
+      "version": "0.2.0",
       "source": {
         "source": "github",
         "repo": "Kohlex/autopilot-plugin"
