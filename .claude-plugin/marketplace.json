@@ -7,11 +7,12 @@
   "plugins": [
     {
       "name": "autopilot",
-      "description": "Autonomous platform-development substrate for Claude Code. v2.1: skill prose aligned to the .planning/<product>/ planning-path resolver (portable across repos); doc-freshness, verbatim-HITL, execution-discipline, integration pipeline (M2-M6).",
-      "version": "0.2.1",
+      "description": "Autonomous platform-development substrate for Claude Code. v2.2: extracted to its own dev repo (Kohlex/autopilot); standalone self-build; .planning/<product>/ planning-path convention; doc-freshness, verbatim-HITL, execution-discipline, integration pipeline (M2-M6).",
+      "version": "0.2.2",
       "source": {
         "source": "github",
-        "repo": "Kohlex/autopilot-plugin"
+        "repo": "Kohlex/autopilot",
+        "ref": "release"
       }
     }
   ]
