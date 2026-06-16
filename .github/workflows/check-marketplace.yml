@@ -1,0 +1,30 @@
+name: Check marketplace
+
+# Guards the catalog against the regression that broke plugin updates:
+# a hardcoded `version` field on a plugin entry freezes Claude Code's version
+# resolution and makes every newer release invisible (forcing uninstall/reinstall).
+# scripts/check-marketplace.mjs fails the build if anyone re-adds one.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.claude-plugin/marketplace.json'
+      - 'scripts/check-marketplace.mjs'
+      - '.github/workflows/check-marketplace.yml'
+  pull_request:
+    paths:
+      - '.claude-plugin/marketplace.json'
+      - 'scripts/check-marketplace.mjs'
+  workflow_dispatch: {}
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate marketplace catalog
+        run: node scripts/check-marketplace.mjs
